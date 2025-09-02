@@ -100,7 +100,7 @@ Create a `.env` file with the following configuration:
 DATABASE_URL="postgresql://username:password@localhost:5432/vectordb?schema=public"
 
 # API Configuration
-OPENAI_API_KEY="your-api-key-here"
+SERVER_API_KEY="your-api-key-here"
 
 # Server Configuration
 HOST="0.0.0.0"
