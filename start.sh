@@ -38,6 +38,12 @@ SQL
 
 echo "Database initialized successfully"
 
+# Debug: Show embedding config
+echo "Embedding config:"
+echo "  MODEL: ${EMBEDDING__MODEL:-text-embedding-ada-002}"
+echo "  BASE_URL: ${EMBEDDING__BASE_URL:-not set}"
+echo "  API_KEY: ${EMBEDDING__API_KEY:0:10}..."
+
 # Start the application
 echo "Starting application..."
 exec uvicorn main:app --host 0.0.0.0 --port ${PORT:-8000}
