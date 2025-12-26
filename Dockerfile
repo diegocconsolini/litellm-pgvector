@@ -28,5 +28,9 @@ RUN prisma generate
 # Expose port
 EXPOSE 8000
 
+# Copy and make startup script executable
+COPY start.sh .
+RUN chmod +x start.sh
+
 # Command to run the application
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"] 
+CMD ["./start.sh"] 
